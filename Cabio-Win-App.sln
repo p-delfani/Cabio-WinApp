@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cabio-Win-App", "Cabio-Win-App\Cabio-Win-App.csproj", "{AF0A1390-63D1-45D3-B450-73AB0CF51F19}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Cabio-Setup", "Cabio-Setup\Cabio-Setup.vdproj", "{5319F7F0-6102-4ED7-AD5D-9CD7C4BBF8E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF0A1390-63D1-45D3-B450-73AB0CF51F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0A1390-63D1-45D3-B450-73AB0CF51F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0A1390-63D1-45D3-B450-73AB0CF51F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0A1390-63D1-45D3-B450-73AB0CF51F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5319F7F0-6102-4ED7-AD5D-9CD7C4BBF8E7}.Debug|Any CPU.ActiveCfg = Debug
+		{5319F7F0-6102-4ED7-AD5D-9CD7C4BBF8E7}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAF934DE-6CD2-4900-8FCC-D48212B659FA}
+	EndGlobalSection
+EndGlobal
