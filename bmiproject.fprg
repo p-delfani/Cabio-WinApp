@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Parmis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-27 07:50:54 PM"/>
+        <attribute name="created" value="UGFybWlzO0RFU0tUT1AtRTBORzZWTjsyMDIxLTAyLTI3OzA1OjQxOjQ0IFBNOzI5NjU="/>
+        <attribute name="edited" value="UGFybWlzO0RFU0tUT1AtRTBORzZWTjsyMDIxLTAyLTI3OzA3OjUwOjU0IFBNOzI7MzA3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="weight" type="Real" array="False" size=""/>
+            <declare name="height" type="Real" array="False" size=""/>
+            <declare name="result" type="Real" array="False" size=""/>
+            <declare name="output" type="String" array="False" size=""/>
+            <comment text="&#1608;&#1586;&#1606; &#1705;&#1575;&#1585;&#1576;&#1585; &#1576;&#1607; &#1589;&#1608;&#1585;&#1578; &#1575;&#1593;&#1588;&#1575;&#1585;&#1740; &#1608;&#1575; &#1576;&#1575; &#1608;&#1575;&#1581;&#1583; &#1705;&#1740;&#1604;&#1608;&#1711;&#1585;&#1605; &#1608;&#1575;&#1585;&#1583;&#1605;&#1740;&#1588;&#1608;&#1583;"/>
+            <input variable="weight"/>
+            <comment text="&#1602;&#1583; &#1705;&#1575;&#1585;&#1576;&#1585; &#1576;&#1607; &#1589;&#1608;&#1585;&#1578; &#1575;&#1593;&#1588;&#1575;&#1585;&#1740; &#1576;&#1575; &#1608;&#1575;&#1581;&#1583; &#1605;&#1578;&#1585; &#1608;&#1575;&#1585;&#1583; &#1605;&#1740;&#1588;&#1608;&#1583;"/>
+            <input variable="height"/>
+            <call expression=" calculateBmi(weight,height)"/>
+            <assign variable="result" expression="calculateBmi(weight,height)"/>
+            <call expression="printBmi(result)"/>
+            <assign variable="output" expression="printBmi(result)"/>
+            <output expression="output" newline="True"/>
+        </body>
+    </function>
+    <function name="calculateBmi" type="Real" variable="result">
+        <parameters>
+            <parameter name="weight" type="Real" array="False"/>
+            <parameter name="height" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="result" expression="weight/(height*height)"/>
+        </body>
+    </function>
+    <function name="printBmi" type="String" variable="output">
+        <parameters>
+            <parameter name="bmiResult" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="output" type="String" array="False" size=""/>
+            <if expression="bmiResult&lt;=18.5">
+                <then>
+                    <assign variable="output" expression="&quot;&#1608;&#1586;&#1606; &#1588;&#1605;&#1575; &#1705;&#1605; &#1575;&#1587;&#1578;&quot;"/>
+                </then>
+                <else>
+                    <if expression="bmiResult &gt; 18.5 &amp;&amp; bmiResult&lt;=24.9">
+                        <then>
+                            <assign variable="output" expression="&quot;&#1608;&#1586;&#1606; &#1588;&#1605;&#1575; &#1575;&#1740;&#1583;&#1607; &#1575;&#1604; &#1575;&#1587;&#1578;&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="bmiResult &gt; 24.9 &amp;&amp; bmiResult&lt;= 29.9">
+                                <then>
+                                    <assign variable="output" expression="&quot;&#1588;&#1605;&#1575; &#1583;&#1575;&#1585;&#1575;&#1740; &#1575;&#1590;&#1575;&#1601;&#1607; &#1608;&#1586;&#1606; &#1607;&#1587;&#1578;&#1740;&#1583;&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="bmiResult &gt; 29.9">
+                                        <then>
+                                            <assign variable="output" expression="&quot;&#1588;&#1605;&#1575; &#1583;&#1575;&#1585;&#1575;&#1740; &#1670;&#1575;&#1602;&#1740; &#1605;&#1601;&#1585;&#1591; &#1607;&#1587;&#1578;&#1740;&#1583;&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="output" expression="&quot;&#1583;&#1575;&#1583;&#1607; &#1607;&#1575;&#1740; &#1608;&#1585;&#1608;&#1583;&#1740; &#1605;&#1593;&#1578;&#1576;&#1585; &#1606;&#1740;&#1587;&#1578;&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
